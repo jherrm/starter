@@ -38,20 +38,20 @@ defaults write NSGlobalDomain com.apple.keyboard.fnState -bool false
 # Stop iTunes from responding to the keyboard media keys
 #launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
 
-# Use smart quotes
+# Automatic smart quotes
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 
 # Set Double and Single quotes
 defaults write NSGlobalDomain NSUserQuotesArray -array '"\""' '"\""' '"'\''"' '"'\''"'
 
-# Use smart dashes
+# Automatic smart dashes
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 
-# Disable automatic period substitution
 #defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
+# Automatic period substitution
 
-# Disable automatic capitalization as it’s annoying when typing code
 #defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
+# Automatic capitalization
 
 # Correct spelling automatically
 # defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
