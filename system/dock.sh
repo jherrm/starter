@@ -19,6 +19,8 @@ defaults write com.apple.dock largesize -int 64
 # Minimization effect: 'genie', 'scale', 'suck'
 defaults write com.apple.dock mineffect -string 'scale'
 
+# Hold shift key for slow motion window animations (like old school OS X)
+defaults write com.apple.dock slow-motion-allowed -bool true
 
 # Dock orientation: 'left', 'bottom', 'right'
 # defaults write com.apple.dock 'orientation' -string 'bottom'
@@ -74,6 +76,9 @@ defaults write com.apple.dock persistent-apps -array
 #   Recent/Favorite items stack: '{ "tile-data" = { "list-type" = 1; }; "tile-type" = "recents-tile"; }'
 # Add a spacer to the left of the Dock
 # defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
+
+# Show recent Applications in Dock
+defaults write com.apple.dock show-recents -bool true
 
 # Display translucent Dock icons for hidden applications
 # defaults write com.apple.dock showhidden -bool true
