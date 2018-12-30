@@ -47,11 +47,11 @@ defaults write NSGlobalDomain NSUserQuotesArray -array '"\""' '"\""' '"'\''"' '"
 # Automatic smart dashes
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 
-#defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
 # Automatic period substitution
+#defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
 
-#defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
 # Automatic capitalization
+#defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
 
 # Correct spelling automatically
 # defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
