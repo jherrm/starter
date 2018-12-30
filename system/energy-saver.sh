@@ -9,7 +9,17 @@
 # 24 Hours : 86400
 sudo pmset -a standbydelay 86400
 
-# Power management settings
+# Power Management
+# Use "pmset" for lower level control, and "systemsetup" for high level.
+# Don't use both at once!
+# https://apple.stackexchange.com/questions/95195/what-is-the-difference-between-pmset-and-systemsetup-sleep-options
+###############################################################################
+
+# High level power management settings: systemsetup
+#sudo systemsetup -setcomputersleep off > /dev/null # "Sleep: Computer sleeps Never"
+#sudo systemsetup -setcomputersleep 20 # "Sleep: Display sleeps after 20 minutes"
+
+# Low level power management settings: pmset
 # `man pmset` for a full list of settings
 IS_LAPTOP=`/usr/sbin/system_profiler SPHardwareDataType 2>/dev/null | grep "Model Identifier" | grep "Book"`
 if [[ "$IS_LAPTOP" != "" ]]; then
@@ -40,9 +50,6 @@ else
         halfdim        1
 
 fi
-
-# Never go into computer sleep mode
-sudo systemsetup -setcomputersleep off > /dev/null
 
 # Restart automatically if the computer freezes
 sudo systemsetup -setrestartfreeze on
