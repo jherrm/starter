@@ -4,5 +4,5 @@
 # iCloud
 ###############################################################################
 
-# Save to iCloud by default
+# Save to iCloud by default (false = Save to disk)
 defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool true
