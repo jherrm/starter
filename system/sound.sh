@@ -16,6 +16,7 @@ defaults write com.apple.systemsound com.apple.sound.beep.sound -string "/System
 defaults write com.apple.systemsound com.apple.sound.uiaudio.enabled -bool false
 
 # Play feedback when volume is changed
+# Hold shift while changing volume to temporarily hear it.
 defaults write NSGlobalDomain com.apple.sound.beep.feedback -bool false
 
 # Disable flashing the screen when an alert sound occurs (accessibility)
