@@ -16,6 +16,8 @@ defaults write com.apple.iWork.Keynote 'FirstRunFlag' -bool true
 #defaults write com.apple.iWork.Numbers 'ShowStartingPointsForNewDocument' -bool false
 defaults write com.apple.iWork.Numbers 'dontShowWhatsNew' -bool true
 defaults write com.apple.iWork.Numbers 'FirstRunFlag' -bool true
+# Hotkey for "File > Export To > CSV…"
+defaults write com.apple.iWork.Numbers NSUserKeyEquivalents -dict-add "\033File\033Export To\033CSV…" '^~@s'
 
 
 # Pages
