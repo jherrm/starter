@@ -29,12 +29,6 @@ defaults write com.apple.dock mineffect -string 'scale'
 # Lock the Dock position
 # defaults write com.apple.dock position-immutable -bool true
 
-# Double-click a window's title bar to:
-# None
-# Mimimize
-# Maximize (zoom)
-defaults write NSGlobalDomain AppleActionOnDoubleClick -string "Maximize"
-
 # Minimize to application
 defaults write com.apple.dock minimize-to-application -bool true
 
