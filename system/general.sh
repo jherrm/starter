@@ -55,6 +55,14 @@ defaults write ~/Library/Preferences/ByHost/com.apple.coreservices.useractivityd
 
 # Disable Auto Save, Versions and Resume
 # defaults write -g ApplePersistence -bool false
+# Disable Resume system-wide (Close windows when quitting an application)
+defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false
+
+# Disable automatic termination of inactive apps
+defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
+
+# Disable App Nap (not recomended)
+# defaults write NSGlobalDomain NSAppSleepDisabled -bool true
 
 # Disable Crash Reporter dialog
 # defaults write com.apple.CrashReporter DialogType none
