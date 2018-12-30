@@ -11,6 +11,7 @@ sudo chmod 444 /private/var/db/.AccessibilityAPIEnabled
 #sudo osascript -e 'tell application "System Events" to set UI elements enabled to true'
 
 ## Display
+###############################################################################
 
 # Increase contrast
 defaults write com.apple.universalaccess increaseContrast -bool false
@@ -22,6 +23,7 @@ defaults write com.apple.universalaccess reduceTransparency -bool false
 defaults write CGDisableCursorLocationMagnification -bool false
 
 ## Zoom
+###############################################################################
 
 # Enable temporary zoom (Hold down ⌃⌥ to zoom when needed)
 defaults write com.apple.universalaccess closeViewPressOnReleaseOff -bool false
@@ -29,6 +31,8 @@ defaults write com.apple.universalaccess closeViewPressOnReleaseOff -bool false
 # Zoom using scroll gesture with the Ctrl (^) modifier key
 defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
 defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
+defaults write com.apple.AppleMultitouchTrackpad HIDScrollZoomModifierMask -int 262144
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad HIDScrollZoomModifierMask -int 262144
 
 # Smooth Zoomed Images
 defaults write com.apple.universalaccess closeViewSmoothImages -bool false
@@ -42,7 +46,7 @@ defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
 defaults write com.apple.universalaccess closeViewZoomMode -int 1
 
 
-# Speech
+## Speech
 ###############################################################################
 
 # Enable Text to Speech
@@ -55,8 +59,30 @@ defaults write com.apple.speech.synthesis.general.prefs SpokenUIUseSpeakingHotKe
 # System Voice
 # Creator    | ID  | Name
 # -----------+-----+------
+# 1734437985 | 300 | Agnes
+# 1836346163 | 41  | Albert
 # 1835364215 | 201 | Alex
+# 1836346163 | 36  | BadNews
+# 1836346163 | 40  | Bahh
+# 1836346163 | 26  | Bells
+# 1836346163 | 16  | Boing
 # 1734437985 | 100 | Bruce
+# 1836346163 | 50  | Bubbles
+# 1836346163 | 35  | Cellos
+# 1836346163 | 38  | Deranged
+# 1836346163 | 1   | Fred
+# 1836346163 | 39  | GoodNews
+# 1836346163 | 30  | Hysterical
+# 1836346163 | 4   | Junior
+# 1836346163 | 2   | Kathy
+# 1836346163 | 31  | Organ  # !! "*Pipe *Organ" in Sys Prefs and prefs file
+# 1836346163 | 3   | Princess
+# 1836346163 | 5   | Ralph
+# 1836346163 | 9   | Trinoids
+# 1835364215 | 200 | Vicki
+# 1734437985 | 200 | Victoria
+# 1836346163 | 6   | Whisper
+# 1836346163 | 8   | Zarvox
 defaults write com.apple.speech.voice.prefs VisibleIdentifiers \
   '{ "com.apple.speech.synthesis.voice.Alex" = 1; }'
 defaults write com.apple.speech.voice.prefs SelectedVoiceCreator -int 1835364215
