@@ -117,13 +117,13 @@ defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebK
 ###############################################################################
 
 # Cookies and website data:
-# 0,2: Alwasy block
+# 0,2: Always block
 # 3,1: Allow from current website only
 # 2,1: Allow from websites I visit
-# 1,0: Alwasy allow
 defaults write com.apple.Safari BlockStoragePolicy -int 2
 defaults write com.apple.Safari WebKitStorageBlockingPolicy -int 1
 defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2StorageBlockingPolicy -int 1
+# 1,0: Always allow
 
 # Website use of location services:
 # 0: Deny without prompting
@@ -151,8 +151,6 @@ defaults write com.apple.Safari ExtensionsEnabled -bool true
 
 # Press Tab to highlight each item on a webpage
 defaults write com.apple.Safari WebKitTabToLinksPreferenceKey -bool true
-
-defaults write com.apple.Safari ReadingListSaveArticlesOfflineAutomatically -bool true
 
 # Save article for offline reading automatically
 defaults write com.apple.Safari ReadingListSaveArticlesOfflineAutomatically -bool true
@@ -186,7 +184,6 @@ defaults write com.apple.Safari FindOnPageMatchesWordStartsOnly -bool false
 
 # Remove useless icons from Safari’s bookmarks bar
 defaults write com.apple.Safari ProxiesInBookmarksBar '()'
-
 
 # Add a context menu item for showing the Web Inspector in web views
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
