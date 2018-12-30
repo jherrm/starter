@@ -4,7 +4,7 @@
 # Mission Control
 ###############################################################################
 
-# Mission Control animation duration
+# Mission Control animation duration (0.1 = fast)
 defaults write com.apple.dock expose-animation-duration -float 0.1
 
 # Automatically rearrange Spaces based on most recent use
@@ -30,6 +30,11 @@ find "${HOME}/Library/Application Support/Dock" -name "*-*.db" -maxdepth 1 -dele
 if [ -e "/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app" ]; then
     sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app" \
                 "/Applications/Simulator.app"
+fi
+# Add Watch Simulator to Launchpad
+if [ -e "/Applications/Xcode.app/Contents/Developer/Applications/Simulator (Watch).app.app" ]; then
+    sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/Simulator (Watch).app.app" \
+                "/Applications/Simulator (Watch).app.app"
 fi
 
 # Hot corners
