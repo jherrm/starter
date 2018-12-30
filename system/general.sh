@@ -64,8 +64,8 @@ defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
 # Disable App Nap (not recomended)
 # defaults write NSGlobalDomain NSAppSleepDisabled -bool true
 
-# Disable Crash Reporter dialog
 # defaults write com.apple.CrashReporter DialogType none
+# Disable the crash reporter
 
 # Display crash reports in Notification Center (instead of dialog)
-defaults write com.apple.CrashReporter UseUNC 1
+defaults write com.apple.CrashReporter UseUNC -bool true
