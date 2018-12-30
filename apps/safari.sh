@@ -143,6 +143,9 @@ defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebK
 # Enable extensions
 defaults write com.apple.Safari ExtensionsEnabled -bool true
 
+# Update extensions automatically
+defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
+
 # Advanced
 ###############################################################################
 
@@ -151,6 +154,7 @@ defaults write com.apple.Safari ExtensionsEnabled -bool true
 
 # Press Tab to highlight each item on a webpage
 defaults write com.apple.Safari WebKitTabToLinksPreferenceKey -bool true
+defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2TabsToLinks -bool true
 
 # Save article for offline reading automatically
 defaults write com.apple.Safari ReadingListSaveArticlesOfflineAutomatically -bool true
@@ -193,6 +197,18 @@ defaults write com.apple.Safari AlwaysShowTabBar -bool false
 
 # Show status bar
 defaults write com.apple.Safari ShowStatusBar -bool true
+
+# Show overlay status bar
+# defaults write com.apple.Safari ShowOverlayStatusBar -bool true
+
+# Hide Safari’s sidebar in Top Sites
+defaults write com.apple.Safari ShowSidebarInTopSites -bool false
+
+# Enable continuous spellchecking
+# defaults write com.apple.Safari WebContinuousSpellCheckingEnabled -bool true
+
+# Disable auto-correct
+# defaults write com.apple.Safari WebAutomaticSpellingCorrectionEnabled -bool false
 
 # Disable auto-playing video
 #defaults write com.apple.Safari WebKitMediaPlaybackAllowsInline -bool false
