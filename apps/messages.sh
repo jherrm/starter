@@ -21,8 +21,8 @@ defaults write com.apple.iChat SaveConversationsOnClose -bool true
 # 7: Large
 defaults write com.apple.iChat TextSize -int 2
 
-defaults write com.apple.iChat AnimateBuddyPictures -bool false
 # Animate buddy pictures
+defaults write com.apple.iChat AnimateBuddyPictures -bool false
 
 # Play sound effects
 defaults write com.apple.messageshelper.AlertsController PlaySoundsKey -bool false
