@@ -7,6 +7,7 @@
 # Require password immediately after sleep or screen saver begins
 defaults write com.apple.screensaver askForPassword -bool true
 defaults write com.apple.screensaver askForPasswordDelay -int 0
+defaults -currentHost write com.apple.screensaver tokenRemovalAction -int 0
 
 # Disable automatic login
 sudo defaults delete /Library/Preferences/com.apple.loginwindow autoLoginUser &> /dev/null
