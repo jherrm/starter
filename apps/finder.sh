@@ -85,19 +85,19 @@ defaults write com.apple.finder OpenWindowForNewRemovableDisk    -bool false
 for view in 'Desktop' 'FK_Standard' 'Standard'; do
 
     # Item info near icons
-    /usr/libexec/PlistBuddy -c "Set :${view}ViewSettings:IconViewSettings:showItemInfo bool true" ~/Library/Preferences/com.apple.finder.plist
+    /usr/libexec/PlistBuddy -c "Set :${view}ViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist
 
-    # Item info to right of icons
-    /usr/libexec/PlistBuddy -c "Set :${view}ViewSettings:IconViewSettings:labelOnBottom bool false" ~/Library/Preferences/com.apple.finder.plist
+    # Item label of icons: bottom (true) or right (false)
+    /usr/libexec/PlistBuddy -c "Set :${view}ViewSettings:IconViewSettings:labelOnBottom false" ~/Library/Preferences/com.apple.finder.plist
 
     # Snap-to-grid for icons
-    /usr/libexec/PlistBuddy -c "Set :${view}ViewSettings:IconViewSettings:arrangeBy string grid" ~/Library/Preferences/com.apple.finder.plist
+    /usr/libexec/PlistBuddy -c "Set :${view}ViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
 
     # Grid spacing for icons
-    /usr/libexec/PlistBuddy -c "Set :${view}ViewSettings:IconViewSettings:gridSpacing integer 100" ~/Library/Preferences/com.apple.finder.plist
+    /usr/libexec/PlistBuddy -c "Set :${view}ViewSettings:IconViewSettings:gridSpacing 100" ~/Library/Preferences/com.apple.finder.plist
 
     # Icon size
-    /usr/libexec/PlistBuddy -c "Set :${view}ViewSettings:IconViewSettings:iconSize integer 32" ~/Library/Preferences/com.apple.finder.plist
+    /usr/libexec/PlistBuddy -c "Set :${view}ViewSettings:IconViewSettings:iconSize 32" ~/Library/Preferences/com.apple.finder.plist
 
 done
 
@@ -128,10 +128,10 @@ defaults write com.apple.finder _FXSortFoldersFirst -bool true
 #   logs : Size
 #   labl : Tags
 /usr/libexec/PlistBuddy \
-    -c "Set :StandardViewOptions:ColumnViewOptions:ColumnShowIcons bool    false" \
-    -c "Set :StandardViewOptions:ColumnViewOptions:FontSize        integer 11"    \
-    -c "Set :StandardViewOptions:ColumnViewOptions:ShowPreview     bool    true"  \
-    -c "Set :StandardViewOptions:ColumnViewOptions:ArrangeBy       string  dnam"  \
+    -c "Set :StandardViewOptions:ColumnViewOptions:ColumnShowIcons false" \
+    -c "Set :StandardViewOptions:ColumnViewOptions:ShowPreview      true" \
+    -c "Set :StandardViewOptions:ColumnViewOptions:FontSize           11" \
+    -c "Set :StandardViewOptions:ColumnViewOptions:ArrangeBy        dnam" \
     ~/Library/Preferences/com.apple.finder.plist
 
 # New window target
