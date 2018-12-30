@@ -41,33 +41,35 @@ function get_open_affected_apps {
 
   # Print the open apps in columns
   printf -- '%s\n' "${open_apps[@]}" | column -x
-
-  echo "Would you like to quit these apps now? [Y/n] "
+  prompt_quit_apps
 }
 
 # Open Application
 # open -a "SpeechSynthesisServer"
 
 # Quit affected applications
-function quit_apps {
-  for app in "${AFFECTED_APPS[@]}"; do
-    case "$app" in
-      'Quick Look')
-        # Restart Quick Look
-        qlmanage -r
-        ;;
-      *)
-        killall "$app" &>/dev/null
-        # osascript -e "tell application \"${app}\" to quit"
-        ;;
-    esac
-  done
+function prompt_quit_apps {
+  read -p "Would you like to quit affected apps now? [y/N] " -r
+  echo
+  if [[ $REPLY =~ ^[Yy]$ ]]; then
+    for app in "${AFFECTED_APPS[@]}"; do
+      case "$app" in
+        'Quick Look')
+          # Restart Quick Look
+          qlmanage -r
+          ;;
+        *)
+          killall "$app" &>/dev/null
+          # osascript -e "tell application \"${app}\" to quit"
+          ;;
+      esac
+    done
+  fi
 }
 
 # Prompt if user wants to restart the machine
 function prompt_restart {
-  echo "Done. Note that some of these changes require a logout/restart to take effect."
-  read -p "Would you like to restart the computer now? [Y/n] " -r
+  read -p "Would you like to restart the computer now? [y/N] " -r
   echo
   if [[ $REPLY =~ ^[Yy]$ ]]; then
       osascript -e 'tell app "System Events" to restart'
@@ -151,6 +153,7 @@ set_prefs transmission "Transmission"
 # Run
 get_open_affected_apps
 source_prefs
-quit_apps
 
+echo "Done. Some of these changes require quitting apps, logging out or restarting to take effect."
+prompt_quit_apps
 prompt_restart
