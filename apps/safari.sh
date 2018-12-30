@@ -120,10 +120,10 @@ defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebK
 # 0,2: Always block
 # 3,1: Allow from current website only
 # 2,1: Allow from websites I visit
+# 1,0: Always allow
 defaults write com.apple.Safari BlockStoragePolicy -int 2
 defaults write com.apple.Safari WebKitStorageBlockingPolicy -int 1
 defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2StorageBlockingPolicy -int 1
-# 1,0: Always allow
 
 # Website use of location services:
 # 0: Deny without prompting
