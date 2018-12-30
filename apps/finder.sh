@@ -40,11 +40,12 @@ defaults write com.apple.finder ShowStatusBar -bool true
 # Path bar
 defaults write com.apple.finder ShowPathbar -bool true
 
-# Text selection in Quick Look
-defaults write com.apple.finder QLEnableTextSelection -bool true
-
 # Full POSIX path as window title
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool false
+
+# Text selection, copy & paste from within QuickLook windows
+# Disabled: https://github.com/paulirish/dotfiles/issues/50
+#defaults write com.apple.finder QLEnableTextSelection -bool true
 
 # Search scope
 # This Mac       : `SCev`
