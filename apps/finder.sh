@@ -22,8 +22,8 @@ chflags -h hidden "${HOME}/bin"
 # Quitting via ⌘ + Q; doing so will also hide desktop icons
 #defaults write com.apple.finder QuitMenuItem -bool true
 
-defaults write com.apple.finder DisableAllAnimations -bool true
 # Disable window animations and Get Info animations
+defaults write com.apple.finder DisableAllAnimations -bool true
 
 # Icons for hard drives, servers, and removable media on the desktop
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false
