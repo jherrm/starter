@@ -10,8 +10,8 @@
 #sudo rm -rf /System/Library/CoreServices/DefaultDesktop.jpg
 #sudo ln -s /path/to/your/image /System/Library/CoreServices/DefaultDesktop.jpg
 
-# Start after begin idle for time (in seconds)
 defaults -currentHost write com.apple.screensaver idleTime -int 1800
+# Start after begin idle for time (in seconds, 1800 = 30 min, 300 = 5 min)
 
 # Show with clock
 defaults -currentHost write com.apple.screensaver showClock -bool false
