@@ -27,6 +27,9 @@ defaults write NSGlobalDomain AppleInterfaceStyle -string "Dark"
 # Large  : 3
 defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
 
+# Prefer tabs when opening documents: 'always', 'fullscreen', 'manual'
+defaults write NSGlobalDomain AppleWindowTabbingMode -string 'always'
+
 # Scroll bar visibility
 # Possible values: `WhenScrolling`, `Automatic` and `Always`
 defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling"

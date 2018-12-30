@@ -19,8 +19,6 @@ defaults write com.apple.dock largesize -int 64
 # Minimization effect: 'genie', 'scale', 'suck'
 defaults write com.apple.dock mineffect -string 'scale'
 
-# Prefer tabs when opening documents: 'always', 'fullscreen', 'manual'
-defaults write NSGlobalDomain AppleWindowTabbingMode -string 'always'
 
 # Dock orientation: 'left', 'bottom', 'right'
 # defaults write com.apple.dock 'orientation' -string 'bottom'
