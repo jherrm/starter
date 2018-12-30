@@ -4,7 +4,7 @@
 # Language & Region
 ###############################################################################
 
-# Prefered languages (in order of preference)
+# Preferred languages (in order of preference)
 defaults write NSGlobalDomain AppleLanguages -array "en"
 
 # Currency
