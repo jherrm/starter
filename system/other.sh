@@ -94,6 +94,9 @@ defaults write com.apple.screencapture name -string "screen"
 #        -e 's#<string>yyyy-MM-dd</string>#<string>yyyy-MM-dd</string>#' | \
 #    sudo plutil -convert binary1 -o "$screencapturestrings" -
 
+# Prevent Photos from opening automatically when devices are plugged in
+defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
+
 # Connecting camera opens (path to application, or '' if no application)
 defaults -currentHost write com.apple.ImageCapture2 HotPlugActionPath -string ''
 
