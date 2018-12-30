@@ -7,7 +7,12 @@
 # Show the main window when launching Activity Monitor
 defaults write com.apple.ActivityMonitor OpenMainWindow -bool true
 
-# Visualize CPU usage in the Activity Monitor Dock icon
+# Change Dock Icon
+# 0: Application Icon
+# 2: Network Usage
+# 3: Disk Activity
+# 5: CPU Usage
+# 6: CPU History
 defaults write com.apple.ActivityMonitor IconType -int 5
 
 # Show processes in Activity Monitor
@@ -54,11 +59,3 @@ defaults write com.apple.ActivityMonitor DiskGraphType -int 1
 
 # Show Data in the Network graph (instead of packets)
 defaults write com.apple.ActivityMonitor NetworkGraphType -int 1
-
-# Change Dock Icon
-# 0: Application Icon
-# 2: Network Usage
-# 3: Disk Activity
-# 5: CPU Usage
-# 6: CPU History
-# defaults write com.apple.ActivityMonitor IconType -int 0
