@@ -2,6 +2,9 @@
 
 ###############################################################################
 # Python
+# 
+# Don't forget to add `pyenv init` to your shell to enable shims and autocompletion
+# echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n eval "$(pyenv init -)"\nfi' >> ~/.bash_profile
 ###############################################################################
 
 # pyenv *should* be installed at this point
@@ -16,7 +19,7 @@ pyenv rehash
 pyenv global $python2_latest
 
 # pip *should* be installed at this point
-hash pip 2>/dev/null || echo "Please install pip before continuing"
+hash pip 2>/dev/null || echo "Install pip before continuing (is pyenv init added to your shell?)"
 
 pip_packages=(
   pip
