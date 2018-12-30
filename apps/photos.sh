@@ -7,7 +7,7 @@
 # Startup (with iCloud Photos selected)
 defaults write com.apple.Photos IPXDefaultDidPromoteiCloudPhotosInGettingStarted -bool true
 defaults write com.apple.Photos IPXDefaultHasBeenLaunched -bool true
-defaults write com.apple.Photos IPXDefaultHasChosenToEnableiCloudPhotosInGettingStarted = 1;
+defaults write com.apple.Photos IPXDefaultHasChosenToEnableiCloudPhotosInGettingStarted -bool true;
 
 # Summarize photos
 # You can choose compast, summarized views for Collections and Years
