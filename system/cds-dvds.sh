@@ -23,4 +23,6 @@ defaults write com.apple.digihub com.apple.digihub.cd.picture.appeared -dict act
 defaults write com.apple.digihub com.apple.digihub.dvd.video.appeared  -dict action 1
 
 # Enable the MacBook Air SuperDrive on any Mac
-sudo nvram boot-args="mbasd=1"
+# Starting with macOS Sierra, you must be booted to the recovery partition to run this.
+# See: https://apple.stackexchange.com/questions/256138/trying-to-set-boot-args-with-nvram-gets-general-error-on-sierra
+# sudo nvram boot-args="mbasd=1"
