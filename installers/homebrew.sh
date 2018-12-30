@@ -20,7 +20,7 @@ if ! crontab -l | fgrep "$cron_entry" >/dev/null; then
 fi
 
 # Install Homebrew Bundle
-brew tap Homebrew/bundle
+brew tap homebrew/bundle
 
 # Ask for the administrator password upfront
 sudo -v
