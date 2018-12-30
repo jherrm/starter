@@ -10,6 +10,9 @@ mkdir -p "$HOME/Sites"
 # Show user `Library` folder
 chflags nohidden "${HOME}/Library"
 
+# Show the /Volumes folder
+sudo chflags nohidden "/Volumes"
+
 # Create user `bin` directory
 mkdir -p "$HOME/bin"
 
@@ -19,8 +22,8 @@ chflags -h hidden "${HOME}/bin"
 # Quitting via ⌘ + Q; doing so will also hide desktop icons
 #defaults write com.apple.finder QuitMenuItem -bool true
 
-# Window animations and Get Info animations
 defaults write com.apple.finder DisableAllAnimations -bool true
+# Disable window animations and Get Info animations
 
 # Icons for hard drives, servers, and removable media on the desktop
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false
@@ -42,6 +45,12 @@ defaults write com.apple.finder ShowPathbar -bool true
 
 # Full POSIX path as window title
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool false
+
+# Double-click a window's title bar to:
+# None
+# Mimimize
+# Maximize (zoom)
+defaults write NSGlobalDomain AppleActionOnDoubleClick -string "Maximize"
 
 # Text selection, copy & paste from within QuickLook windows
 # Disabled: https://github.com/paulirish/dotfiles/issues/50
@@ -141,7 +150,7 @@ defaults write com.apple.finder _FXSortFoldersFirst -bool true
 # Desktop      : `PfDe`
 # Documents    : `PfDo`
 # All My Files : `PfAF`
-# Other…       : `PfLo`
+# Other…       : `PfLo` and `file:///full/path/here/`
 defaults write com.apple.finder NewWindowTarget -string 'PfHm'
 #defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/"
 
